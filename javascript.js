@@ -24,6 +24,12 @@ discardButtons.forEach((button) => {
 
 const renderCart = function () {
   cartDisplay.innerHTML = localStorage.getItem("cartHTML");
+  const buttonsDelete = Array.from(
+    document.getElementsByClassName("btn-warning")
+  );
+  buttonsDelete.forEach((button) => {
+    button.addEventListener("click", removeFromCart);
+  });
 };
 const removeFromCart = function (e) {
   e.target.parentElement.remove();
