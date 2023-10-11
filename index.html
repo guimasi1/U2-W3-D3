@@ -15,21 +15,41 @@
   <body>
     <div class="container">
       <div class="row">
-        <div class="col">
+        <div class="col mb-2">
           <div class="d-flex justify-content-between align-items-center">
             <h1 class="fw-bold">CART</h1>
-            <div>
+            <div class="align-content-center d-flex align-items-center">
               <button id="clear-button" class="btn btn-secondary">
                 Clear Cart
               </button>
             </div>
+          </div>
+          <div>
+            <p id="total-display" class="fw-bold d-none">Total: 0$</p>
           </div>
           <div id="cart-display" class="d-flex flex-column gap-2"></div>
         </div>
       </div>
       <h1 class="fw-bold">LIBRARY</h1>
       <div id="library" class="row row-cols-1 row-cols-md-3 g-2">
-        <div class="col">
+        <div class="col mb-2">
+          <div class="card">
+            <img src="" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <button class="btn btn-danger" onclick="discard(e)">
+                Discard
+              </button>
+              <button class="btn btn-success">Add To Cart</button>
+            </div>
+          </div>
+        </div>
+        <div class="col mb-2">
           <div class="card">
             <img src="" class="card-img-top" alt="..." />
             <div class="card-body">
@@ -45,7 +65,7 @@
             </div>
           </div>
         </div>
-        <div class="col">
+        <div class="col mb-2">
           <div class="card">
             <img src="" class="card-img-top" alt="..." />
             <div class="card-body">
@@ -61,7 +81,7 @@
             </div>
           </div>
         </div>
-        <div class="col">
+        <div class="col mb-2">
           <div class="card">
             <img src="" class="card-img-top" alt="..." />
             <div class="card-body">
@@ -77,7 +97,7 @@
             </div>
           </div>
         </div>
-        <div class="col">
+        <div class="col mb-2">
           <div class="card">
             <img src="" class="card-img-top" alt="..." />
             <div class="card-body">
@@ -93,7 +113,7 @@
             </div>
           </div>
         </div>
-        <div class="col">
+        <div class="col mb-2">
           <div class="card">
             <img src="" class="card-img-top" alt="..." />
             <div class="card-body">
@@ -109,7 +129,7 @@
             </div>
           </div>
         </div>
-        <div class="col">
+        <div class="col mb-2">
           <div class="card">
             <img src="" class="card-img-top" alt="..." />
             <div class="card-body">
@@ -125,7 +145,7 @@
             </div>
           </div>
         </div>
-        <div class="col">
+        <div class="col mb-2">
           <div class="card">
             <img src="" class="card-img-top" alt="..." />
             <div class="card-body">
@@ -141,7 +161,7 @@
             </div>
           </div>
         </div>
-        <div class="col">
+        <div class="col mb-2">
           <div class="card">
             <img src="" class="card-img-top" alt="..." />
             <div class="card-body">
@@ -157,7 +177,7 @@
             </div>
           </div>
         </div>
-        <div class="col">
+        <div class="col mb-2">
           <div class="card">
             <img src="" class="card-img-top" alt="..." />
             <div class="card-body">
@@ -173,7 +193,7 @@
             </div>
           </div>
         </div>
-        <div class="col">
+        <div class="col mb-2">
           <div class="card">
             <img src="" class="card-img-top" alt="..." />
             <div class="card-body">
@@ -189,7 +209,7 @@
             </div>
           </div>
         </div>
-        <div class="col">
+        <div class="col mb-2">
           <div class="card">
             <img src="" class="card-img-top" alt="..." />
             <div class="card-body">
@@ -205,7 +225,7 @@
             </div>
           </div>
         </div>
-        <div class="col">
+        <div class="col mb-2">
           <div class="card">
             <img src="" class="card-img-top" alt="..." />
             <div class="card-body">
@@ -221,7 +241,7 @@
             </div>
           </div>
         </div>
-        <div class="col">
+        <div class="col mb-2">
           <div class="card">
             <img src="" class="card-img-top" alt="..." />
             <div class="card-body">
@@ -237,7 +257,7 @@
             </div>
           </div>
         </div>
-        <div class="col">
+        <div class="col mb-2">
           <div class="card">
             <img src="" class="card-img-top" alt="..." />
             <div class="card-body">
@@ -253,7 +273,7 @@
             </div>
           </div>
         </div>
-        <div class="col">
+        <div class="col mb-2">
           <div class="card">
             <img src="" class="card-img-top" alt="..." />
             <div class="card-body">
@@ -269,7 +289,7 @@
             </div>
           </div>
         </div>
-        <div class="col">
+        <div class="col mb-2">
           <div class="card">
             <img src="" class="card-img-top" alt="..." />
             <div class="card-body">
@@ -285,7 +305,7 @@
             </div>
           </div>
         </div>
-        <div class="col">
+        <div class="col mb-2">
           <div class="card">
             <img src="" class="card-img-top" alt="..." />
             <div class="card-body">
@@ -301,7 +321,7 @@
             </div>
           </div>
         </div>
-        <div class="col">
+        <div class="col mb-2">
           <div class="card">
             <img src="" class="card-img-top" alt="..." />
             <div class="card-body">
@@ -317,7 +337,7 @@
             </div>
           </div>
         </div>
-        <div class="col">
+        <div class="col mb-2">
           <div class="card">
             <img src="" class="card-img-top" alt="..." />
             <div class="card-body">
@@ -333,7 +353,7 @@
             </div>
           </div>
         </div>
-        <div class="col">
+        <div class="col mb-2">
           <div class="card">
             <img src="" class="card-img-top" alt="..." />
             <div class="card-body">
@@ -349,7 +369,7 @@
             </div>
           </div>
         </div>
-        <div class="col">
+        <div class="col mb-2">
           <div class="card">
             <img src="" class="card-img-top" alt="..." />
             <div class="card-body">
@@ -365,7 +385,7 @@
             </div>
           </div>
         </div>
-        <div class="col">
+        <div class="col mb-2">
           <div class="card">
             <img src="" class="card-img-top" alt="..." />
             <div class="card-body">
@@ -381,7 +401,7 @@
             </div>
           </div>
         </div>
-        <div class="col">
+        <div class="col mb-2">
           <div class="card">
             <img src="" class="card-img-top" alt="..." />
             <div class="card-body">
@@ -397,7 +417,7 @@
             </div>
           </div>
         </div>
-        <div class="col">
+        <div class="col mb-2">
           <div class="card">
             <img src="" class="card-img-top" alt="..." />
             <div class="card-body">
@@ -413,7 +433,7 @@
             </div>
           </div>
         </div>
-        <div class="col">
+        <div class="col mb-2">
           <div class="card">
             <img src="" class="card-img-top" alt="..." />
             <div class="card-body">
@@ -429,7 +449,7 @@
             </div>
           </div>
         </div>
-        <div class="col">
+        <div class="col mb-2">
           <div class="card">
             <img src="" class="card-img-top" alt="..." />
             <div class="card-body">
@@ -445,7 +465,7 @@
             </div>
           </div>
         </div>
-        <div class="col">
+        <div class="col mb-2">
           <div class="card">
             <img src="" class="card-img-top" alt="..." />
             <div class="card-body">
@@ -461,7 +481,7 @@
             </div>
           </div>
         </div>
-        <div class="col">
+        <div class="col mb-2">
           <div class="card">
             <img src="" class="card-img-top" alt="..." />
             <div class="card-body">
@@ -477,7 +497,7 @@
             </div>
           </div>
         </div>
-        <div class="col">
+        <div class="col mb-2">
           <div class="card">
             <img src="" class="card-img-top" alt="..." />
             <div class="card-body">
@@ -493,7 +513,7 @@
             </div>
           </div>
         </div>
-        <div class="col">
+        <div class="col mb-2">
           <div class="card">
             <img src="" class="card-img-top" alt="..." />
             <div class="card-body">
@@ -509,7 +529,7 @@
             </div>
           </div>
         </div>
-        <div class="col">
+        <div class="col mb-2">
           <div class="card">
             <img src="" class="card-img-top" alt="..." />
             <div class="card-body">
@@ -525,7 +545,7 @@
             </div>
           </div>
         </div>
-        <div class="col">
+        <div class="col mb-2">
           <div class="card">
             <img src="" class="card-img-top" alt="..." />
             <div class="card-body">
@@ -541,7 +561,7 @@
             </div>
           </div>
         </div>
-        <div class="col">
+        <div class="col mb-2">
           <div class="card">
             <img src="" class="card-img-top" alt="..." />
             <div class="card-body">
@@ -557,7 +577,7 @@
             </div>
           </div>
         </div>
-        <div class="col">
+        <div class="col mb-2">
           <div class="card">
             <img src="" class="card-img-top" alt="..." />
             <div class="card-body">
@@ -573,7 +593,7 @@
             </div>
           </div>
         </div>
-        <div class="col">
+        <div class="col mb-2">
           <div class="card">
             <img src="" class="card-img-top" alt="..." />
             <div class="card-body">
@@ -589,7 +609,7 @@
             </div>
           </div>
         </div>
-        <div class="col">
+        <div class="col mb-2">
           <div class="card">
             <img src="" class="card-img-top" alt="..." />
             <div class="card-body">
@@ -605,7 +625,7 @@
             </div>
           </div>
         </div>
-        <div class="col">
+        <div class="col mb-2">
           <div class="card">
             <img src="" class="card-img-top" alt="..." />
             <div class="card-body">
@@ -621,7 +641,7 @@
             </div>
           </div>
         </div>
-        <div class="col">
+        <div class="col mb-2">
           <div class="card">
             <img src="" class="card-img-top" alt="..." />
             <div class="card-body">
@@ -637,7 +657,7 @@
             </div>
           </div>
         </div>
-        <div class="col">
+        <div class="col mb-2">
           <div class="card">
             <img src="" class="card-img-top" alt="..." />
             <div class="card-body">
@@ -653,7 +673,7 @@
             </div>
           </div>
         </div>
-        <div class="col">
+        <div class="col mb-2">
           <div class="card">
             <img src="" class="card-img-top" alt="..." />
             <div class="card-body">
@@ -669,7 +689,7 @@
             </div>
           </div>
         </div>
-        <div class="col">
+        <div class="col mb-2">
           <div class="card">
             <img src="" class="card-img-top" alt="..." />
             <div class="card-body">
@@ -685,7 +705,7 @@
             </div>
           </div>
         </div>
-        <div class="col">
+        <div class="col mb-2">
           <div class="card">
             <img src="" class="card-img-top" alt="..." />
             <div class="card-body">
@@ -701,7 +721,7 @@
             </div>
           </div>
         </div>
-        <div class="col">
+        <div class="col mb-2">
           <div class="card">
             <img src="" class="card-img-top" alt="..." />
             <div class="card-body">
@@ -717,7 +737,7 @@
             </div>
           </div>
         </div>
-        <div class="col">
+        <div class="col mb-2">
           <div class="card">
             <img src="" class="card-img-top" alt="..." />
             <div class="card-body">
@@ -733,7 +753,7 @@
             </div>
           </div>
         </div>
-        <div class="col">
+        <div class="col mb-2">
           <div class="card">
             <img src="" class="card-img-top" alt="..." />
             <div class="card-body">
@@ -749,7 +769,7 @@
             </div>
           </div>
         </div>
-        <div class="col">
+        <div class="col mb-2">
           <div class="card">
             <img src="" class="card-img-top" alt="..." />
             <div class="card-body">
@@ -765,7 +785,7 @@
             </div>
           </div>
         </div>
-        <div class="col">
+        <div class="col mb-2">
           <div class="card">
             <img src="" class="card-img-top" alt="..." />
             <div class="card-body">
@@ -781,7 +801,7 @@
             </div>
           </div>
         </div>
-        <div class="col">
+        <div class="col mb-2">
           <div class="card">
             <img src="" class="card-img-top" alt="..." />
             <div class="card-body">
@@ -797,23 +817,7 @@
             </div>
           </div>
         </div>
-        <div class="col">
-          <div class="card">
-            <img src="" class="card-img-top" alt="..." />
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
-              </p>
-              <button class="btn btn-danger" onclick="discard(e)">
-                Discard
-              </button>
-              <button class="btn btn-success">Add To Cart</button>
-            </div>
-          </div>
-        </div>
-        <div class="col">
+        <div class="col mb-2">
           <div class="card">
             <img src="" class="card-img-top" alt="..." />
             <div class="card-body">

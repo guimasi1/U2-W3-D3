@@ -8,6 +8,40 @@ const addButtons = Array.from(document.getElementsByClassName("btn-success"));
 const myBooks = document.getElementById("my-books");
 const cartDisplay = document.getElementById("cart-display");
 const clearButton = document.getElementById("clear-button");
+const totalDisplay = document.getElementById("total-display");
+
+const books = [];
+
+const getBooks = function () {
+  fetch("https://striveschool-api.herokuapp.com/books")
+    .then((response) => {
+      if (response.ok) {
+        return response.json();
+      } else {
+        throw new Error("Error");
+      }
+    })
+    .then((data) => {
+      data.forEach((dato, i) => {
+        titles[i].innerHTML = data[i].title;
+      });
+      data.forEach((dato, i) => {
+        prices[i].innerHTML = data[i].price + "$";
+      });
+      data.forEach((dato, i) => {
+        imgs[i].src = data[i].img;
+      });
+      data.forEach((dato) => {
+        books.push(dato);
+        localStorage.setItem("books", JSON.stringify(books));
+      });
+    })
+
+    .catch((err) => {
+      console.log(err);
+    });
+};
+const arrayOfBooks = JSON.parse(localStorage.getItem("books"));
 
 clearButton.addEventListener("click", () => {
   localStorage.clear();
@@ -38,6 +72,8 @@ const removeFromCart = function (e) {
   renderCart();
 };
 
+let total = 0;
+
 const addBook = function (e) {
   const targetParent = e.target.parentElement;
   const titleToAdd = targetParent.querySelector("h5").textContent;
@@ -56,40 +92,13 @@ const addBook = function (e) {
   divContainer.appendChild(paragraph);
   divContainer.appendChild(buttonDelete);
   localStorage.setItem("cartHTML", cartDisplay.innerHTML);
+
   renderCart();
 };
 
 addButtons.forEach((button) => {
   button.addEventListener("click", addBook);
 });
-
-const arrayOfBooks = [];
-
-const getBooks = function () {
-  fetch("https://striveschool-api.herokuapp.com/books")
-    .then((response) => {
-      if (response.ok) {
-        return response.json();
-      } else {
-        throw new Error("Error");
-      }
-    })
-    .then((data) => {
-      data.forEach((dato, i) => {
-        titles[i].innerHTML = data[i].title;
-      });
-      data.forEach((dato, i) => {
-        prices[i].innerHTML = data[i].price + "$";
-      });
-      data.forEach((dato, i) => {
-        imgs[i].src = data[i].img;
-      });
-    })
-
-    .catch((err) => {
-      console.log(err);
-    });
-};
 
 // const discard = (e) => {};
 
